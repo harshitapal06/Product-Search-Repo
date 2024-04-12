@@ -6,7 +6,7 @@ export default function AppFooter() {
   return (
       <footer className="footer">
         <hr />
-        &copy; 2023 Microsoft
+        &copy;nagarro
       </footer>
   );
 };
