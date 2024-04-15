@@ -90,7 +90,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     # variables sent in body
     req_body = req.get_json()
+    logging.info("/req_body  = %s", req_body)
     q = req_body.get("q")
+    logging.info("/q is  = %s", q)
     top = req_body.get("top") or 8
     skip = req_body.get("skip") or 0
     filters = req_body.get("filters") or []
