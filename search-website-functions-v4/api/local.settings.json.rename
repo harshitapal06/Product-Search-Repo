@@ -7,9 +7,10 @@
     "SearchApiKey": "YOUR-SEARCH-QUERY-KEY",
     "SearchServiceName": "YOUR-SEARCH-RESOURCE-NAME",
     "SearchIndexName": "good-books",
-    "SearchFacets": "authors*,language_code"
+    "SearchFacets": "supplier_name*,category"
   },
   "Host": {
     "CORS": "*"
   } 
 }
+
