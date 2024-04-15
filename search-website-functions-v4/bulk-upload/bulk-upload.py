@@ -35,7 +35,7 @@ index_name = "good-books"
 index_schema = "./good-books-index.json"
 
 # Books catalog
-books_url = r"C:\Users\harshitapal\Downloads\product\Product-Search-Repo\search-website-functions-v4\bulk-upload\Training_data_tab.txt"
+books_url = r"C:\Users\harshitapal\Downloads\product-new-repo\Product-Search-Repo\search-website-functions-v4\bulk-upload\Training_data_tab.txt"
 
 batch_size = 1000
 
