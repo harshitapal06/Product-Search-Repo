@@ -11,12 +11,12 @@ content-type: application/json
     "skip":0,
     "filters":[
         {
-            "field":"authors",
-            "value":"James Patterson"
+            "field":"supplier_name",
+            "value":"WB MASON CO INC"
         },
         {
-            "field":"language_code",
-            "value":"en-US"
+            "field":"category",
+            "value":"Binders"
         }
     ]
 }
