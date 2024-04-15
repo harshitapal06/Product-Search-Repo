@@ -89,17 +89,14 @@ bp=func.Blueprint()
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
     # variables sent in body
-    q ="Protein Extraction Kits"
-    top =  8
-    skip = 0
-    filters = []
-    # req_body = req.get_json()
-    # logging.info("/req_body  = %s", req_body)
-    # q = req_body.get("q")
-    # logging.info("/q is  = %s", q)
-    # top = req_body.get("top") or 8
-    # skip = req_body.get("skip") or 0
-    # filters = req_body.get("filters") or []
+    
+    req_body = req.get_json()
+    logging.info("/req_body  = %s", req_body)
+    q = req_body.get("q")
+    logging.info("/q is  = %s", q)
+    top = req_body.get("top") or 8
+    skip = req_body.get("skip") or 0
+    filters = req_body.get("filters") or []
 
     facets = environment_vars["search_facets"]
     facetKeys = read_facets(facets)
@@ -125,10 +122,20 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         # format the React app expects
         full_response = {}
 
-        full_response["count"] = search_results.get_count()
-        full_response["facets"] = search_results.get_facets()
-        full_response["results"] = returned_docs
-
+        # full_response["count"] = search_results.get_count()
+        # full_response["facets"] = search_results.get_facets()
+        # full_response["results"] = returned_docs
+        full_response = {'count': 1,
+        'facets': None,
+        'results': [{'score': 9.799809,
+        'highlights': None,
+        'document': {'id': '3825401',
+            'supplier_name': 'FISHER SCIENTIFIC COMPANY LLC',
+            'part_number': '50563135',
+            'category': 'Protein Extraction Kits',
+            'unspsc': '41106510.0',
+            'product_description': 'S.O. Succinic Acid 13 Ph 5.5; 1/EA HR2-249-13',
+            'image_url': 'https://uxwing.com/wp-content/themes/uxwing/download/logistics-shipping-delivery/search-product-icon.png'}}]}
         return func.HttpResponse(
             body=json.dumps(full_response), mimetype="application/json", status_code=200
         )
