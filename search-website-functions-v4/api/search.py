@@ -130,6 +130,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         full_response["count"] = search_results.get_count()
         full_response["facets"] = search_results.get_facets()
         full_response["results"] = returned_docs
+        logging.info("/full response is  = %s", full_response)
         return func.HttpResponse(
             body=json.dumps(full_response), mimetype="application/json", status_code=200
         )
