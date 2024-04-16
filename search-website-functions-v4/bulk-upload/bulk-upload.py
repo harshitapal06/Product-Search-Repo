@@ -19,6 +19,7 @@ from azure.search.documents.indexes.models import (
 
 
 
+
 # Get the service name (short name) and admin API key from the environment
 service_name = ""
 
