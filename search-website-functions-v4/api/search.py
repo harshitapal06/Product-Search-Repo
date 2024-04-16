@@ -98,11 +98,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     skip = req_body.get("skip") or 0
     filters = req_body.get("filters") or []
 
-    q = "Protein Extraction Kits"
-    top =  8
-    skip = 0
-    filters = []
-
     facets = environment_vars["search_facets"]
     facetKeys = read_facets(facets)
 
