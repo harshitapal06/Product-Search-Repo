@@ -4,29 +4,29 @@ import "./UploadFile.css";
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 // import  ClipLoader  from "react-spinners/ClipLoader";
-import { HashLoader } from "react-spinners";
+// import { HashLoader } from "react-spinners";
 
 const fileTypes = ["JPEG", "PNG", "GIF", "PDF"];
 
-const override = {
-  display: "block",
-  margin: "0 auto",
-  borderColor: "red",
-};
+// const override = {
+//   display: "block",
+//   margin: "0 auto",
+//   borderColor: "red",
+// };
 
 const UploadFile = () => {
 
   const [file, setFile] = useState(null);
   const [data, setData] = useState(null);
   // let [loading, setLoading] = useState(false);
-  let [color, setColor] = useState("#36d7b7");
-  const [username, setUsername] = useState('gurveer.singh01@nagarro.com');
-  const [password, setPassword] = useState('Public@123');
+  // let [color, setColor] = useState("#36d7b7");
+  const [username] = useState('gurveer.singh01@nagarro.com');
+  const [password] = useState('Public@123');
 
 
   const handleChange = (file) => {
     setFile(file);
-    console.log("file:", file)
+    // console.log("file:", file)
   };
 
   const handleFetchData = () => {
@@ -41,14 +41,14 @@ const UploadFile = () => {
     };
 
     const body = file ? file[0] : null;
-    console.log("body:", body)
+    // console.log("body:", body)
     axios.post('https://invoicescanner1a3e6ac0a1-uy78x7nr0f.hana.ondemand.com/invoicescanner/api/rest/scan-invoice', body, {
       headers: headers,
       auth: auth,
       responseType: 'json'
     })
       .then(response => {
-        console.log("data:", response.data)
+        // console.log("data:", response.data)
         setData(response.data);
       })
       .catch(error => {
@@ -59,9 +59,9 @@ const UploadFile = () => {
       // });
   };
 
-  useEffect(() => {
+  // useEffect(() => {
     
-  }, []);
+  // }, []);
 
   
 
@@ -90,7 +90,6 @@ const UploadFile = () => {
       )} */}
       
       {data && data.map((item, index) => (
-        console.log("tabular:", item),
         <div key={index}>
 
           <p><strong>Vendor Name:</strong> {item.Fields.Vendor.Name}</p>

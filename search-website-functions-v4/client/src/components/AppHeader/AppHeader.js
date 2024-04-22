@@ -1,15 +1,13 @@
 import React from 'react';
 import AppHeaderAuth from '../AppHeaderAuth/AppHeaderAuth';
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import logo from '../../images/microsoft_small.png';
 
 import './AppHeader.css';
 
 export default function AppHeader() {
   //const navigate = useNavigate();
-  const handleUploadFile = () => {
-    //navigate('/uploadfile');
-  }
+  
   return (
     <header className="header">
       <nav className="navbar navbar-expand-lg">
