@@ -1,7 +1,7 @@
 
 import { FileUploader } from "react-drag-drop-files";
 import "./UploadFile.css";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from 'axios';
 // import  ClipLoader  from "react-spinners/ClipLoader";
 // import { HashLoader } from "react-spinners";
