@@ -8,8 +8,16 @@
     height: auto;
 }
 
-.nav-link { color: #fff; }
+.nav-link { color: #fff;}
 .nav-link:hover { color: #eee; }
 
 .auth-link { color: #fff; }
 .auth-link:hover { color: #eee; }
+
+.uploadBtn{
+    /* border: 2px solid red; */
+    margin: 0px 20px 0px 0px;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}

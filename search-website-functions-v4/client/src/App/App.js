@@ -18,6 +18,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Custom app styles
 import './App.css';
+import UploadFile from '../components/UploadFile/UploadFile';
 
 export default function App() {
   // React Hook: useState with a var name, set function, & default value
@@ -35,6 +36,7 @@ export default function App() {
       }
     }
   }
+  
 
   // React Hook: useEffect when component changes
   // Empty array ensure this only runs once on mount
@@ -52,6 +54,7 @@ export default function App() {
             <Route path={`/search`} element={<Search />} />
             <Route path={`/details/:id`} element={<Details />}/>
             <Route path={`*`} element={<Home />} />
+            <Route path={`/uploadfile`} element={<UploadFile />} />
           </Routes>
         </BrowserRouter>
         {<AppFooter />}
