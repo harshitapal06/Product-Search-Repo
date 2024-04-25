@@ -93,7 +93,7 @@ export default function Search() {
       <div className="row">
         <div className="col-md-3">
           <div className="search-bar">
-            <SearchBar postSearchHandler={postSearchHandler} q={q}></SearchBar>
+            {/* <SearchBar postSearchHandler={postSearchHandler} q={q}></SearchBar> */}
             {/* <AppHeader headerSearchHandler={headerSearchHandler} q={q}></AppHeader> */}
           </div>
           <Facets facets={facets} filters={filters} setFilters={setFilters}></Facets>

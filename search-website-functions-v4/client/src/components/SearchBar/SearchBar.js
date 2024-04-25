@@ -72,7 +72,7 @@ export default function SearchBar(props) {
     }
 
     return (
-        <div style={{width:"60%"}}>
+        <div style={{width:"74%"}}>
             <div className="input-group" onKeyDown={e => onEnterButton(e)}>
                 <div className="suggestions" >
                     <input

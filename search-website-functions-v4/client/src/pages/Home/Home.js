@@ -29,7 +29,7 @@ export default function Home() {
         {/* <SearchBar postSearchHandler={navigateToSearchPage}></SearchBar> */}
         {/* <AppHeader postSearchHandler={navigateToSearchPage}></AppHeader> */}
         <div style={{ padding: "0px 0px 0px 270px" ,margin:"0px 0px 50px 0px"}}>
-          <h5>Most Search Product</h5>
+          <h5>Most Searched Products</h5>
         </div>
         <div className="results-container">
           <div style={{ display: "flex", alignItems: "center" }}>

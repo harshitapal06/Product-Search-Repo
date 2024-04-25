@@ -144,12 +144,12 @@ export default function AppHeader(props) {
         <div style={{ margin: "0px 20px 0xp 0px" }}>
           <img src={sign_In} width={100} alt=''></img>
         </div>
-        <div>
+        {/* <div>
           <img src={return_Icon} width={70} alt=''></img>
         </div>
         <div>
           <img src={cart_Icon} width={70} alt=''></img>
-        </div>
+        </div> */}
         {/* </div> */}
         <div className="uploadTag">
           <a className="uploadBtn" href="/uploadFile">UPLOAD FILE</a>
