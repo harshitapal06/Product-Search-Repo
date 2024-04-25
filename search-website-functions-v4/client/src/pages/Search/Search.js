@@ -6,7 +6,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Results from '../../components/Results/Results';
 import Pager from '../../components/Pager/Pager';
 import Facets from '../../components/Facets/Facets';
-import SearchBar from '../../components/SearchBar/SearchBar';
+// import SearchBar from '../../components/SearchBar/SearchBar';
 
 import "./Search.css";
 // import AppHeader from '../../components/AppHeader/AppHeader';
@@ -19,7 +19,8 @@ export default function Search() {
   const [ results, setResults ] = useState([]);
   const [ resultCount, setResultCount ] = useState(0);
   const [ currentPage, setCurrentPage ] = useState(1);
-  const [ q, setQ ] = useState(new URLSearchParams(location.search).get('q') ?? "*");
+  // const [ q, setQ ] = useState(new URLSearchParams(location.search).get('q') ?? "*");
+  const [ q ] = useState(new URLSearchParams(location.search).get('q') ?? "*");
   const [ top ] = useState(new URLSearchParams(location.search).get('top') ?? 8);
   const [ skip, setSkip ] = useState(new URLSearchParams(location.search).get('skip') ?? 0);
   const [ filters, setFilters ] = useState([]);
@@ -63,14 +64,11 @@ export default function Search() {
   }, [q]);
 
 
-  let postSearchHandler = (searchTerm) => {
-    //console.log(searchTerm);
-    setQ(searchTerm);
-  }
-  // let headerSearchHandler = (searchTerm) => {
+  // let postSearchHandler = (searchTerm) => {
   //   //console.log(searchTerm);
   //   setQ(searchTerm);
   // }
+  
 
   var body;
   if (isLoading) {
