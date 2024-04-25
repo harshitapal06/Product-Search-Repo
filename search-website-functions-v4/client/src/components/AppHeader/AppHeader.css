@@ -1,5 +1,6 @@
 .header {
-    background-color: #469f7b;
+    /* background-color: #469f7b; */
+    background-color: #131921;
     color: #eee;
 }
 
@@ -17,7 +18,24 @@
 .uploadBtn{
     /* border: 2px solid red; */
     margin: 0px 20px 0px 0px;
-    color: black;
+    color: white;
     cursor: pointer;
     text-decoration: none;
+    font-size: 12px;
+}
+
+/* For search bar css */
+div.container a.input-group-btn {
+    font-size: 14px;
+}
+
+.suggestions {
+    position: relative;
+    display: inline-block;
+    width: inherit;
+    z-index:99
+}
+
+.input-group {
+    flex-wrap: nowrap;
 }

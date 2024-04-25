@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Context for user authentication
 import { AuthContext } from '../contexts/AuthContext';
@@ -47,8 +48,8 @@ export default function App() {
   return (
     <AuthContext.Provider value={user}>
       <div className="container-fluid app">
+        <Router>
         <AppHeader />
-        <BrowserRouter>
           <Routes>
             <Route path={`/`} element={<Home />} />
             <Route path={`/search`} element={<Search />} />
@@ -56,7 +57,7 @@ export default function App() {
             <Route path={`*`} element={<Home />} />
             <Route path={`/uploadfile`} element={<UploadFile />} />
           </Routes>
-        </BrowserRouter>
+        </Router>
         {<AppFooter />}
       </div>
     </AuthContext.Provider>

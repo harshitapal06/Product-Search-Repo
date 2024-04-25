@@ -9,6 +9,7 @@ import Facets from '../../components/Facets/Facets';
 import SearchBar from '../../components/SearchBar/SearchBar';
 
 import "./Search.css";
+// import AppHeader from '../../components/AppHeader/AppHeader';
 
 export default function Search() {
   
@@ -66,6 +67,10 @@ export default function Search() {
     //console.log(searchTerm);
     setQ(searchTerm);
   }
+  // let headerSearchHandler = (searchTerm) => {
+  //   //console.log(searchTerm);
+  //   setQ(searchTerm);
+  // }
 
   var body;
   if (isLoading) {
@@ -89,6 +94,7 @@ export default function Search() {
         <div className="col-md-3">
           <div className="search-bar">
             <SearchBar postSearchHandler={postSearchHandler} q={q}></SearchBar>
+            {/* <AppHeader headerSearchHandler={headerSearchHandler} q={q}></AppHeader> */}
           </div>
           <Facets facets={facets} filters={filters} setFilters={setFilters}></Facets>
         </div>
