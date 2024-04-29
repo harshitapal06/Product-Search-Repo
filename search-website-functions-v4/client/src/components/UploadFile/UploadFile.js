@@ -54,16 +54,16 @@ const UploadFile = () => {
       .catch(error => {
         console.error('Error fetching data:', error);
       })
-      // .finally(() => {
-      //   setLoading(false); // Set loading state to false when data fetching is done
-      // });
+    // .finally(() => {
+    //   setLoading(false); // Set loading state to false when data fetching is done
+    // });
   };
 
   // useEffect(() => {
-    
+
   // }, []);
 
-  
+
 
 
   return (
@@ -88,13 +88,17 @@ const UploadFile = () => {
           data-testid="loader"
         />
       )} */}
-      
+
       {data && data.map((item, index) => (
         <div key={index}>
 
           <p><strong>Vendor Name:</strong> {item.Fields.Vendor.Name}</p>
+          <p><strong>Vendor Address:</strong> {item.Fields.Vendor.Address}</p>
+          <p><strong>Vendor Country:</strong> {item.Fields.Vendor.Country}</p>
+          <p><strong>Vendor Tax ID:</strong> {item.Fields.Vendor['Tax ID']}</p>
           <p><strong>Invoice number:</strong> {item.Fields['Invoice Number']}</p>
-          
+          <p><strong>Invoice Date:</strong> {item.Fields['Invoice Date'].join('/')}</p>
+
           <ul>
             {item.Fields['Line Items'].map((lineItem, idx) => (
               <li key={idx}>
@@ -102,12 +106,17 @@ const UploadFile = () => {
                 <p><strong>Quantity:</strong> {lineItem.Quantity}</p>
                 <p><strong>Net Price:</strong> {lineItem['Net Price']}</p>
                 <p><strong>Article Number Vendor:</strong> {lineItem['Article Number Vendor']}</p>
+                <p><strong>Order Number:</strong> {lineItem['Order Number']}</p>
+                <p><strong>TypeCode:</strong> {lineItem.TypeCode}</p>
               </li>
             ))}
           </ul>
           <p><strong>Business Unit:</strong> {item.Fields['Business Unit'].Name}</p>
+          <p><strong>Address:</strong> {item.Fields['Business Unit'].Address}</p>
+          <p><strong>Country:</strong> {item.Fields['Business Unit'].Country}</p>
         </div>
       ))}
+    
     </div>
   )
 

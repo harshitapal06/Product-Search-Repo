@@ -31,7 +31,7 @@ export default function Results(props) {
       <div className="results-container">
         {results.map(result => (
           <div key={result.key} style={{ display: "flex", alignItems: "center" }}>
-            <img src={result.props.document.image_url} alt="Product" style={{ marginRight: "10px",width:"200px" }} />
+            <img src={result.props.document.image_url} alt="Product" style={{margin:"0px 10px 20px 0px",width:"200px"}} />
             <a href={`/details/${result.props.document.id}`} style={{ fontWeight: "bold", color: "black" }}>{result.props.document.product_description}</a>
           </div>
         ))}
