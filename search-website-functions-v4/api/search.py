@@ -74,9 +74,11 @@ def new_shape(docs):
         new_api_shape["supplier_name"] = item["supplier_name"]
         new_api_shape["catalog_number"] = item["catalog_number"]
         new_api_shape["category"] = item["category"]
-        new_api_shape["unspsc"] = item["unspsc"]
+        new_api_shape["commodity_code"] = item["commodity_code"]
         new_api_shape["product_description"] = item["product_description"]
         new_api_shape["image_url"] = item["image_url"]
+        new_api_shape["department"] = item["department"]
+        new_api_shape["previous_purchase_date"] = item["previous_purchase_date"]
 
         new_document["document"] = new_api_shape
 
