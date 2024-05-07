@@ -5,10 +5,10 @@ import React from "react";
 
 import "./Home.css";
 import "../../pages/Search/Search.css";
-// import logo from '../../images/cognitive_search.png';
-import Coat_Item from '../../images/coat.png';
-import battery_Item from '../../images/battery.png';
-import blade_Item from '../../images/blead.png';
+import logo from '../../images/cognitive_search.png';
+// import Coat_Item from '../../images/coat.png';
+// import battery_Item from '../../images/battery.png';
+// import blade_Item from '../../images/blead.png';
 // import head_Item from '../../images/head_Phone.png';
 // import AppHeader from "../../components/AppHeader/AppHeader";
 
@@ -24,11 +24,11 @@ export default function Home() {
   return (
     <main className="main main--home">
       <div className="row home-search">
-        {/* <img className="logo" src={logo} alt="Cognitive Search"></img>
-        <p className="poweredby lead">Search across your products</p> */}
+        <img className="logo" src={logo} alt="Cognitive Search"></img>
+        <p className="poweredby lead">Search across your products</p>
         {/* <SearchBar postSearchHandler={navigateToSearchPage}></SearchBar> */}
         {/* <AppHeader postSearchHandler={navigateToSearchPage}></AppHeader> */}
-        <div style={{ padding: "0px 0px 0px 270px" ,margin:"0px 0px 50px 0px"}}>
+        {/* <div style={{ padding: "0px 0px 0px 270px" ,margin:"0px 0px 50px 0px"}}>
           <h5>Most Searched Products</h5>
         </div>
         <div className="results-container">
@@ -48,7 +48,7 @@ export default function Home() {
             <img src={blade_Item} alt="Product" style={{ margin: "20px 40px 0px 0px", width: "200px" }} />
             <p> Gem2 Sng Edg Bld Crtdg 1000/Cs; 1000/CS AVBL-3000-0000 </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </main>
   );
