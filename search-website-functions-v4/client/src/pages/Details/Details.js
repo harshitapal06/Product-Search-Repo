@@ -12,6 +12,8 @@ export default function Details() {
   const [selectedTab, setTab] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
+
+
   useEffect(() => {
     setIsLoading(true);
     // console.log(id);
@@ -31,8 +33,8 @@ export default function Details() {
 
   // View default is loading with no active tab
   let detailsBody = (<CircularProgress />),
-      resultStyle = "nav-link",
-      rawStyle    = "nav-link";
+    resultStyle = "nav-link",
+    rawStyle = "nav-link";
 
   if (!isLoading && document) {
     // View result
@@ -42,7 +44,7 @@ export default function Details() {
         <div className="card-body">
           <h5 className="card-title">{document.product_description}</h5>
           <img className="image" src={document.image_url} alt="Product"></img>
-        
+
         </div>
       );
     }
@@ -52,9 +54,20 @@ export default function Details() {
       rawStyle += " active";
       detailsBody = (
         <div className="card-body text-left">
-          <pre><code>
-            {JSON.stringify(document, null, 2)}
-          </code></pre>
+          {/* <pre><code>
+          {JSON.stringify(document, null, 2)}
+          </code></pre> */}
+
+          <p><strong>ID:</strong> {document.id}</p>
+          <p><strong>Catalog Number:</strong> {document.catalog_number}</p>
+          <p><strong>Category:</strong> {document.category}</p>
+          <p><strong>Commodity Code:</strong> {document.commodity_code}</p>
+          <p><strong>previous_purchase_date:</strong> {document.previous_purchase_date ?? 'null'}</p>
+          <p><strong>Product Description:</strong> {document.product_description}</p>
+          <p><strong>Supplier Name:</strong> {document.supplier_name}</p>
+          <p><strong>Supplier id:</strong> {document.supplierid}</p>
+          <p><strong>department:</strong> {document.department ?? 'null'}</p>
+          <p><strong>Image url:</strong> {document.image_url}</p>
         </div>
       );
     }
@@ -65,8 +78,8 @@ export default function Details() {
       <div className="card text-center result-container">
         <div className="card-header">
           <ul className="nav nav-tabs card-header-tabs">
-              <li className="nav-item"><button className={resultStyle} onClick={() => setTab(0)}>Result</button></li>
-              <li className="nav-item"><button className={rawStyle} onClick={() => setTab(1)}>Raw Data</button></li>
+            <li className="nav-item"><button className={resultStyle} onClick={() => setTab(0)}>Result</button></li>
+            <li className="nav-item"><button className={rawStyle} onClick={() => setTab(1)}>Raw Data</button></li>
           </ul>
         </div>
         {detailsBody}
