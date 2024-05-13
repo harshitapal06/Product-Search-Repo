@@ -80,7 +80,8 @@ export default function SearchBar(props) {
                         type="text"
                         id="search-box"
                         className="form-control rounded-0"
-                        placeholder="Search Products and Catalogs of your choices"
+                        // placeholder="Search Products and Catalogs of your choices"
+                        placeholder="Find"
                         onChange={onChangeHandler}
                         defaultValue={props.q}
                         onBlur={() => setShowSuggestions(false)}

@@ -10,18 +10,19 @@ import sign_In from '../../images/amazone_sign.png';
 // import Suggestions from './Suggestions/Suggestions';
 
 import './AppHeader.css';
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 // import Suggestions from '../SearchBar/Suggestions/Suggestions';
 import SearchBar from '../SearchBar/SearchBar';
 
 export default function AppHeader(props) {
-
+  const location = useLocation();
   const navigate = useNavigate();
+  const shouldDisplaySearchBar = location.pathname === '/search';
   const navigateToSearchPage = (q) => {
     if (!q || q === '') {
       q = '*'
     }
-    navigate('/search//?q=' + q);
+    navigate('/search?q=' + q);
   }
   //const navigate = useNavigate();
   // let [q, setQ] = useState("");
@@ -95,7 +96,7 @@ export default function AppHeader(props) {
     <header className="header">
       <nav className="navbar navbar-expand-lg">
         <a className="navbar-brand" href="/">
-          <img src={logo} height="100" className="navbar-logo" alt="Microsoft" />
+          <img src={logo} height="100" className="navbar-logo" alt="Microsoft" style={{ margin: "0px 0px 0px 20px" }} />
         </a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -104,13 +105,13 @@ export default function AppHeader(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <a className="nav-link" href="/search" style={{ fontSize: "20px", color: "white" }}>Search</a>
+              {/* <a className="nav-link" href="/search" style={{ fontSize: "20px", color: "white" }}>Search</a> */}
             </li>
 
           </ul>
         </div>
-        <SearchBar postSearchHandler={navigateToSearchPage}></SearchBar>
-
+        {/* <SearchBar postSearchHandler={navigateToSearchPage}></SearchBar> */}
+        {shouldDisplaySearchBar && <SearchBar postSearchHandler={navigateToSearchPage}></SearchBar>}
         {/* <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <div className="uploadTag">
