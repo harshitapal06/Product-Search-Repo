@@ -9,27 +9,27 @@ export default function Details() {
 
   let { id } = useParams();
   const [document, setDocument] = useState({});
-  const [showDetails, setShowDetails] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  // const [showDetails, setShowDetails] = useState(false);
+  // const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(true);
+    // setIsLoading(true);
     axios.get('/api/lookup?id=' + id)
       .then(response => {
         console.log(JSON.stringify(response.data))
         const doc = response.data.document;
         setDocument(doc);
-        setIsLoading(false);
+        // setIsLoading(false);
       })
       .catch(error => {
         console.log(error);
-        setIsLoading(false);
+        // setIsLoading(false);
       });
   }, [id]);
 
-  const toggleDetails = () => {
-    setShowDetails(!showDetails);
-  };
+  // const toggleDetails = () => {
+  //   setShowDetails(!showDetails);
+  // };
 
   return (
     // <main className="main main--details container fluid">

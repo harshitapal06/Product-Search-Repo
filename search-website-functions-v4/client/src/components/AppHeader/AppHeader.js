@@ -17,7 +17,9 @@ import SearchBar from '../SearchBar/SearchBar';
 export default function AppHeader(props) {
   const location = useLocation();
   const navigate = useNavigate();
-  const shouldDisplaySearchBar = location.pathname === '/search';
+  // const shouldDisplaySearchBar = location.pathname === '/search';
+  // console.log(location.pathname, "Location PathName");
+  const detailPage = location.pathname !== '/'
   const navigateToSearchPage = (q) => {
     if (!q || q === '') {
       q = '*'
@@ -111,7 +113,8 @@ export default function AppHeader(props) {
           </ul>
         </div>
         {/* <SearchBar postSearchHandler={navigateToSearchPage}></SearchBar> */}
-        {shouldDisplaySearchBar && <SearchBar postSearchHandler={navigateToSearchPage}></SearchBar>}
+        {/* {shouldDisplaySearchBar && <SearchBar postSearchHandler={navigateToSearchPage}></SearchBar>} */}
+        {detailPage && <SearchBar postSearchHandler={navigateToSearchPage}></SearchBar>}
         {/* <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <div className="uploadTag">
