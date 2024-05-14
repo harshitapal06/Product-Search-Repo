@@ -74,10 +74,10 @@ export default function Details() {
     // </main>
     <main className="main main--details container fluid">
       <div className="product-container">
-        <div className="card-header">
+        {/* <div className="card-header">
           <button className="product_Btn" onClick={toggleDetails}>Product Details</button>
-        </div>
-        {showDetails && !isLoading && (
+        </div> */}
+        {/* {showDetails && !isLoading && ( */}
           <div className="main_Container">
             <div className="product-image">
               {/*  Add an image element here if you have an image for the product */}
@@ -145,7 +145,7 @@ export default function Details() {
             </div>
 
           </div>
-        )}
+        {/* )} */}
 
       </div>
     </main>
