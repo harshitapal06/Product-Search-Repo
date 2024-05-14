@@ -25,7 +25,7 @@ export default function Home() {
     <main className="main main--home">
       <div className="row home-search">
         <img className="logo" src={logo} alt="Cognitive Search"></img>
-        <p className="poweredby lead">Search across your products</p>
+        <p className="poweredby lead">Streamlined Invoice Search</p>
         <div style={{margin:"0px 0px 0px 90px"}}>
           <SearchBar postSearchHandler={navigateToSearchPage}></SearchBar>
         </div>

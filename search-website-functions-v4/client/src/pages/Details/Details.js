@@ -53,7 +53,7 @@ export default function Details() {
     else {
       rawStyle += " active";
       detailsBody = (
-        <div className="card-body text-left">
+        <div className="card-body">
           {/* <pre><code>
           {JSON.stringify(document, null, 2)}
           </code></pre> */}
@@ -62,12 +62,12 @@ export default function Details() {
           <p><strong>Catalog Number:</strong> {document.catalog_number}</p>
           <p><strong>Category:</strong> {document.category}</p>
           <p><strong>Commodity Code:</strong> {document.commodity_code}</p>
-          <p><strong>previous_purchase_date:</strong> {document.previous_purchase_date ?? 'null'}</p>
+          <p><strong>Last Purchase Date:</strong> {document.previous_purchase_date ?? 'null'}</p>
           <p><strong>Product Description:</strong> {document.product_description}</p>
           <p><strong>Supplier Name:</strong> {document.supplier_name}</p>
           <p><strong>Supplier id:</strong> {document.supplierid}</p>
-          <p><strong>department:</strong> {document.department ?? 'null'}</p>
-          <p><strong>Image url:</strong> {document.image_url}</p>
+          <p><strong>Department:</strong> {document.department ?? 'null'}</p>
+          {/* <p><strong>Image url:</strong> {document.image_url}</p> */}
         </div>
       );
     }

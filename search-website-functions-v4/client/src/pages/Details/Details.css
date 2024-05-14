@@ -6,3 +6,7 @@
     width: 10em;
     height: auto;
 }
+
+.card-body{
+    text-align: left;
+}
