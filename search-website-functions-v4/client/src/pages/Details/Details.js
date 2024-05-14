@@ -81,7 +81,7 @@ export default function Details() {
           <div className="main_Container">
             <div className="product-image">
               {/*  Add an image element here if you have an image for the product */}
-              <img className="image" src={document.image_url} alt="Product" />
+              <img className="image" src={document.image_url} alt="Product" style={{width:"200px"}}/>
             </div>
             <div className="product-info">
               <div className="product-name">{document.product_description}</div>
@@ -93,7 +93,7 @@ export default function Details() {
                 {/* <span className="detail-purchasedlabel">Last Purchased :</span> */}
                 <div className="detail-prizevalue">$299</div>
               </div>
-              <div className="price">Products Details</div>
+              <div className="price">Products Details:</div>
               <div className="product-details" >
                 <div>
                   <span className="detail-label">Category</span>
@@ -128,7 +128,7 @@ export default function Details() {
 
               </div>
               <div>
-                <div className="detail-productLabel">Product Description</div>
+                <div className="detail-productLabel">Product Description:</div>
                 <div className="detail-Productvalue">{document.product_description}</div>
               </div>
               <div className="button_Container">

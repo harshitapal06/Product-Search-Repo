@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 // import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+// import head from '../../src/images/head_Phone.png';
 // Context for user authentication
 import { AuthContext } from '../contexts/AuthContext';
 

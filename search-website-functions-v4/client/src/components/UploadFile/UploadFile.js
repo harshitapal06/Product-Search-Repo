@@ -94,7 +94,7 @@ const UploadFile = () => {
       <div className="invoiceDetails">
         {data && data.length > 0 && (
           <div style={{ textAlign: "center", marginBottom: "10px" }}>
-            <p style={{ fontWeight: "bold", color: "green" }}>Info extracted successfully!</p>
+            <p style={{ fontWeight: "bold", color: "green" }}>Information extracted successfully</p>
           </div>
         )}
         {data && data.map((item, index) => (
