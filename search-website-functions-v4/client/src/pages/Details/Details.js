@@ -91,7 +91,7 @@ export default function Details() {
               </div>
               <div className="last-purchased">
                 {/* <span className="detail-purchasedlabel">Last Purchased :</span> */}
-                <div className="detail-prizevalue">$299</div>
+                <div className="detail-prizevalue">$30</div>
               </div>
               <div className="price">Products Details:</div>
               <div className="product-details" >
