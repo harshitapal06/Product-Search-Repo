@@ -105,12 +105,15 @@ text-align: left;
   .detail-purchsedvalue{
     font-family: sans-serif;
     font-size: 12px;
-font-weight: 400;
-line-height: 14.4px;
-text-align: left;
-display: inline;
+    font-weight: 400;
+    line-height: 14.4px;
+    text-align: left;
+    display: inline;
   }
-
+.price_Purchase{
+  display: flex;
+  margin-bottom: 10px;
+}
 .detail-prizevalue{
     font-family: sans-serif;
     font-size: 24px;
@@ -118,8 +121,18 @@ display: inline;
     /* line-height: 14.4px; */
     color: black;
     font-weight: bold;
-    text-align: left;
+    /* text-align: left; */
+    
 }  
+.detail-prizelabel{
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  /* line-height: 14.4px; */
+  color: black;
+  font-weight: bold;
+  /* text-align: left; */
+} 
   
   .buy-now:hover {
     /* background-color: lightblue;

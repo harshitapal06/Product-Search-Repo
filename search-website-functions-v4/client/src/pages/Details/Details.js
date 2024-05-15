@@ -74,6 +74,7 @@ export default function Details() {
     // </main>
     <main className="main main--details container fluid">
       <div className="product-container">
+        {console.log("document:",document)}
         {/* <div className="card-header">
           <button className="product_Btn" onClick={toggleDetails}>Product Details</button>
         </div> */}
@@ -89,9 +90,9 @@ export default function Details() {
                 <div className="detail-purchasedlabel">Last Purchased :</div>
                 <div className="detail-purchsedvalue">{document.previous_purchase_date ?? 'null'}</div>
               </div>
-              <div className="last-purchased">
-                {/* <span className="detail-purchasedlabel">Last Purchased :</span> */}
-                <div className="detail-prizevalue">$30</div>
+              <div className="price_Purchase">
+                <div className="detail-prizelabel">$</div>
+                <div className="detail-prizevalue">{document.price}</div>
               </div>
               <div className="price">Products Details:</div>
               <div className="product-details" >
