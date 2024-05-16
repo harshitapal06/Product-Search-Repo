@@ -114,7 +114,7 @@ export default function Details() {
                 </div>
                 <div>
                   <span className="detail-label">Department</span>
-                  <span className="detail-value">{document.department ?? 'null'}</span>
+                  <span className="detail-value">{document.department ?? 'N/A'}</span>
                 </div>
                 <div>
                   <span className="detail-label">ID</span>
