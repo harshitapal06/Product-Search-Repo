@@ -95,7 +95,7 @@ text-align: left;
   }
   .detail-purchasedlabel{
     font-family: sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 14.4px;
     text-align: left;
@@ -104,7 +104,7 @@ text-align: left;
   }
   .detail-purchsedvalue{
     font-family: sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 14.4px;
     text-align: left;
@@ -200,4 +200,5 @@ color: #fff;
 .horizontal_Line{
     background-color: #EDEEF1 ;
     height: 1px;
+    margin: 0px 0px 10px 0px;
 }

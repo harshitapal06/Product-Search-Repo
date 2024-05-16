@@ -88,7 +88,7 @@ export default function Details() {
               <div className="product-name">{document.product_description}</div>
               <div className="last-purchased">
                 <div className="detail-purchasedlabel">Last Purchased :</div>
-                <div className="detail-purchsedvalue">{document.previous_purchase_date ?? 'null'}</div>
+                <div className="detail-purchsedvalue">{document.previous_purchase_date ?? 'N/A'}</div>
               </div>
               <div className="price_Purchase">
                 <div className="detail-prizelabel">$</div>
@@ -109,7 +109,7 @@ export default function Details() {
                   <span className="detail-value">{document.supplier_name}</span>
                 </div>
                 <div>
-                  <span className="detail-label">Supplier Id</span>
+                  <span className="detail-label">Supplier ID</span>
                   <span className="detail-value">{document.supplierid}</span>
                 </div>
                 <div>
@@ -129,19 +129,19 @@ export default function Details() {
 
               </div>
               <div>
-                <div className="detail-productLabel">Product Description:</div>
-                <div className="detail-Productvalue">{document.product_description}</div>
+                {/* <div className="detail-productLabel">Product Description:</div>
+                <div className="detail-Productvalue">{document.product_description}</div> */}
               </div>
               <div className="button_Container">
                 <div>
                   <button className="buy-now">Download Invoice</button>
                 </div>
                 <div>
-                  <button className="buy-now">Invoice History</button>
+                  <button className="buy-now">Purchase History</button>
                 </div>
-                <div>
+                {/* <div>
                   <button className="buy-now">View Similar Products</button>
-                </div>
+                </div> */}
               </div>
             </div>
 
