@@ -113,7 +113,7 @@ export default function Details() {
                   <span className="detail-value">{document.supplierid}</span>
                 </div>
                 <div>
-                  <span className="detail-label">Busness Unit</span>
+                  <span className="detail-label">Business</span>
                   <span className="detail-value">{document.department ?? 'N/A'}</span>
                 </div>
                 {/* <div>

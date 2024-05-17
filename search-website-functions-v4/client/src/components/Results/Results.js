@@ -1,6 +1,6 @@
 import React from 'react';
 import Result from './Result/Result';
-import star_Logo from '../../images/star_Icon.png'
+import star_Logo from '../../images/diversity.png'
 import "./Results.css";
 
 export default function Results(props) {
@@ -35,7 +35,7 @@ export default function Results(props) {
             <div>
               <a href={`/details/${result.props.document.id}`} style={{ fontWeight: "bold", color: "black", display: "block" }}>{result.props.document.product_description}</a>
               {result.props.document.diversity === "1" && (
-                <img src={star_Logo} className="star_logo" alt="star" style={{ marginTop: "10px" }} />
+                <img src={star_Logo} className="star_logo" alt="star" style={{ marginTop: "10px",width:"20px"}} />
               )}
               <div style={{fontSize:"24px",fontWeight:"700"}}>Price: ${result.props.document.price}</div>
               <div>Supplier: {result.props.document.supplier_name}</div>
