@@ -11,11 +11,17 @@
     margin: auto auto 0;
 }
 .Ums_logo {
-    height: 40px;
-    width: 40px;
+    /* height: 40px;
+    width: 40px; */
     /* display:block; */
     /* margin: auto auto 0; */
-    margin: 190px 0px 0px 0px;
+    /* margin: 190px 0px 0px 0px; */
+    /* height: 12em;
+    width: auto; */
+    height: 40px;
+    width: 40px;
+    display:block;
+    margin: auto auto 0;
 }
 .Ums_Container{
     display: flex;
