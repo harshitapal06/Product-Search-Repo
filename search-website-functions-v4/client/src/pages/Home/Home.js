@@ -6,6 +6,7 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 import "./Home.css";
 import "../../pages/Search/Search.css";
 import logo from '../../images/UOM_logo.png';
+import nagarro_Logo from '../../images/microsoft_small.png'
 // import Coat_Item from '../../images/coat.png';
 // import battery_Item from '../../images/battery.png';
 // import blade_Item from '../../images/blead.png';
@@ -24,9 +25,12 @@ export default function Home() {
   return (
     <main className="main main--home">
       <div className="row home-search">
-        <img className="logo" src={logo} alt="Cognitive Search"></img>
-        <p className="poweredby lead">Streamlined Invoice Search</p>
-        <div style={{margin:"0px 0px 0px 90px"}}>
+        <div style={{ display: "flex" }}>
+          <img className="logo" src={nagarro_Logo} alt="Cognitive Search"></img>
+          <img className="logo" src={logo} alt="Cognitive Search"></img>
+        </div>
+        <p className="poweredby lead">ProcureMate</p>
+        <div style={{ margin: "0px 0px 0px 90px" }}>
           <SearchBar postSearchHandler={navigateToSearchPage}></SearchBar>
         </div>
         {/* <AppHeader postSearchHandler={navigateToSearchPage}></AppHeader> */}

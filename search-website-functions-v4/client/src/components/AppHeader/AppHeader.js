@@ -2,6 +2,7 @@ import React from 'react';
 import AppHeaderAuth from '../AppHeaderAuth/AppHeaderAuth';
 // import { useNavigate } from "react-router-dom";
 import logo from '../../images/UOM_logo.png';
+import nagarro_Logo from '../../images/microsoft_small.png'
 // import cart_Icon from '../../images/amazon_Cart.png';
 // import return_Icon from '../../images/return_Order.png';
 import sign_In from '../../images/amazone_sign.png';
@@ -98,7 +99,9 @@ export default function AppHeader(props) {
     <header className="header">
       <nav className="navbar navbar-expand-lg">
         <a className="navbar-brand" href="/">
-          <img src={logo} height="100" className="navbar-logo" alt="Microsoft" style={{ margin: "0px 0px 0px 20px" }} />
+          <img src={nagarro_Logo} height="100" className="navbar-logo" alt="Microsoft" style={{ margin: "0px 0px 0px 20px" }}/>
+          <span style={{ margin: "0 20px",color:"white",fontSize:"16px"}}>Partner With</span>
+          <img src={logo} height="100" className="navbar-logo" alt="Microsoft" style={{ margin: "0px 0px 0px 0px" }} />
         </a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
