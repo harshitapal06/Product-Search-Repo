@@ -1,7 +1,7 @@
 import React from 'react';
 import AppHeaderAuth from '../AppHeaderAuth/AppHeaderAuth';
 // import { useNavigate } from "react-router-dom";
-import logo from '../../images/microsoft_small.png';
+import logo from '../../images/UOM_logo.png';
 // import cart_Icon from '../../images/amazon_Cart.png';
 // import return_Icon from '../../images/return_Order.png';
 import sign_In from '../../images/amazone_sign.png';

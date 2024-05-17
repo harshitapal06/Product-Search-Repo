@@ -97,7 +97,7 @@ export default function Details() {
               <div className="price">Products Details:</div>
               <div className="product-details" >
                 <div>
-                  <span className="detail-label">Category</span>
+                  <span className="detail-label">Product Category</span>
                   <span className="detail-value">{document.category}</span>
                 </div>
                 <div>
@@ -113,13 +113,13 @@ export default function Details() {
                   <span className="detail-value">{document.supplierid}</span>
                 </div>
                 <div>
-                  <span className="detail-label">Department</span>
+                  <span className="detail-label">Busness Unit</span>
                   <span className="detail-value">{document.department ?? 'N/A'}</span>
                 </div>
-                <div>
+                {/* <div>
                   <span className="detail-label">ID</span>
                   <span className="detail-value">{document.id}</span>
-                </div>
+                </div> */}
                 <div>
                   <span className="detail-label">Commodity Code</span>
                   <span className="detail-value">{document.commodity_code}</span>
