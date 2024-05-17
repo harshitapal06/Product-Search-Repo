@@ -77,9 +77,11 @@ def new_shape(docs):
         new_api_shape["commodity_code"] = item["commodity_code"]
         new_api_shape["product_description"] = item["product_description"]
         new_api_shape["image_url"] = item["image_url"]
-        new_api_shape["department"] = item["department"]
+        new_api_shape["business_unit"] = item["business_unit"]
         new_api_shape["previous_purchase_date"] = item["previous_purchase_date"]
-
+        new_api_shape["price"] = item["price"]
+        new_api_shape["diversity"] = item["diversity"]
+        
         new_document["document"] = new_api_shape
 
         client_side_expected_shape.append(new_document)
