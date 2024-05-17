@@ -27,7 +27,7 @@ export default function Home() {
       <div className="row home-search">
         <div style={{ display: "flex" }}>
           <img className="logo" src={nagarro_Logo} alt="Cognitive Search"></img>
-          <img className="logo" src={logo} alt="Cognitive Search"></img>
+          {/* <img className="logo" src={logo} alt="Cognitive Search"></img> */}
         </div>
         <p className="poweredby lead">ProcureMate</p>
         <div style={{ margin: "0px 0px 0px 90px" }}>
@@ -55,6 +55,10 @@ export default function Home() {
             <p> Gem2 Sng Edg Bld Crtdg 1000/Cs; 1000/CS AVBL-3000-0000 </p>
           </div>
         </div> */}
+      </div>
+      <div className="Ums_Container">
+
+      <img className="Ums_logo" src={logo} alt="Cognitive Search"></img>
       </div>
     </main>
   );

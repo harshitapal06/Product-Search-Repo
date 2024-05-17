@@ -37,6 +37,8 @@ export default function Results(props) {
               {result.props.document.diversity === "1" && (
                 <img src={star_Logo} className="star_logo" alt="star" style={{ marginTop: "10px" }} />
               )}
+              <div>Prize: {result.props.document.price}</div>
+              <div>Supplier: {result.props.document.supplier_name}</div>
             </div>
           </div>
         ))}

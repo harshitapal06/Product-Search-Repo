@@ -10,6 +10,17 @@
     display:block;
     margin: auto auto 0;
 }
+.Ums_logo {
+    height: 40px;
+    width: 40px;
+    /* display:block; */
+    /* margin: auto auto 0; */
+    margin: 190px 0px 0px 0px;
+}
+.Ums_Container{
+    display: flex;
+    flex-direction: row-reverse;
+}
 
 .poweredby {
     text-align: center;
