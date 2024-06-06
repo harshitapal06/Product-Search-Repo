@@ -56,10 +56,9 @@ export default function Home() {
           </div>
         </div> */}
       </div>
-      <div className="Ums_Container">
-
+      {/*<div className="Ums_Container">
       <img className="Ums_logo" src={logo} alt="Cognitive Search"></img>
-      </div>
+      </div>*/}
     </main>
   );
 };
