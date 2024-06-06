@@ -5,7 +5,7 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 
 import "./Home.css";
 import "../../pages/Search/Search.css";
-import logo from '../../images/UOM_logo.png';
+//import logo from '../../images/UOM_logo.png';
 import nagarro_Logo from '../../images/microsoft_small.png'
 // import Coat_Item from '../../images/coat.png';
 // import battery_Item from '../../images/battery.png';
