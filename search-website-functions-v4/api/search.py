@@ -37,8 +37,11 @@ def create_filter_expression(filter_list, facets):
     filter_expressions = []
     return_string = ""
     separator = " and "
+    logging.info("/filter_list is  = %s", filter_list)
 
     while i < len(filter_list):
+        logging.info("/filter_list is  = %s", len(filter_list))
+
         field = filter_list[i]["field"]
         value = filter_list[i]["value"]
 
@@ -52,11 +55,13 @@ def create_filter_expression(filter_list, facets):
         i += 1
 
     return_string = separator.join(filter_expressions)
+    logging.info("/return_string is  = %s", return_string)
 
     return return_string
 
 
 def new_shape(docs):
+    logging.info("/new_shape is  = %s", docs)
 
     old_api_shape = list(docs)
 
@@ -81,10 +86,13 @@ def new_shape(docs):
         new_api_shape["previous_purchase_date"] = item["previous_purchase_date"]
         new_api_shape["price"] = item["price"]
         new_api_shape["diversity"] = item["diversity"]
-        
         new_document["document"] = new_api_shape
 
         client_side_expected_shape.append(new_document)
+        logging.info("/new_document is  = %s", new_document)
+        logging.info("/client_side_expected_shape is  = %s", client_side_expected_shape)
+
+
 
     return list(client_side_expected_shape)
 
@@ -104,6 +112,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     filters = req_body.get("filters") or []
 
     facets = environment_vars["search_facets"]
+    logging.info("/facets  = %s", facets)
     facetKeys = read_facets(facets)
 
     search_filter = ""
